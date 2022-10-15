@@ -1,0 +1,777 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@200&display=swap");
+html {
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+     tab-size: 4;
+}
+
+html {
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+html {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+hr {
+  height: 0;
+  color: inherit;
+}
+
+abbr[title] {
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+}
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+kbd,
+pre,
+code,
+samp {
+  font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
+  font-size: 1em;
+}
+
+small {
+  font-size: 80%;
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+table {
+  text-indent: 0;
+  border-color: inherit;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+button,
+[type=button],
+[type=reset],
+[type=submit] {
+  -webkit-appearance: button;
+}
+
+::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+:-moz-ui-invalid {
+  box-shadow: none;
+}
+
+legend {
+  padding: 0;
+}
+
+progress {
+  vertical-align: baseline;
+}
+
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+  height: auto;
+}
+
+[type=search] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+}
+
+::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit;
+}
+
+summary {
+  display: list-item;
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 10px;
+  font-weight: 400;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+a,
+a:visited,
+a:active,
+a:focus,
+a:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+li {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* =============================================================== */
+/* Variables and mixins                                            */
+/* =============================================================== */
+/* =============================================================== */
+/* Fluid Sizing                                                    */
+/* =============================================================== */
+/* =============================================================== */
+/* Custom chekbox                                                  */
+/* =============================================================== */
+/* From uiverse.io by @nikk7007 */
+.checkbox-label {
+  display: flex;
+  align-items: center;
+}
+
+input[type=checkbox] {
+  display: inline-block;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  position: relative;
+  border-radius: 15%;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+input[type=checkbox]::after {
+  content: "";
+  display: block;
+  border-bottom: 0.31rem solid #fff;
+  border-right: 0.31rem solid #fff;
+  opacity: 0;
+  transform: rotate(45deg) translate(-50%, -50%);
+  position: absolute;
+  top: 45%;
+  left: 23%;
+}
+
+input[type=checkbox]::before {
+  content: "";
+  display: block;
+  height: 0;
+  width: 0;
+  background-color: #F2994A;
+  border-radius: 50%;
+  opacity: 0.5;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transition: 0.1s ease;
+}
+
+input[type=checkbox]:checked::before {
+  height: 130%;
+  width: 130%;
+  opacity: 100%;
+}
+
+input[type=checkbox]:checked::after {
+  opacity: 100%;
+}
+
+input[type=checkbox]:not(:checked) {
+  border: 1px solid #828282;
+}
+
+/* =============================================================== */
+/* Common                                                          */
+/* =============================================================== */
+* {
+  font-weight: 600;
+}
+
+html {
+  background-color: hsl(0deg, 0%, 98%);
+  color: #4E5150;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  min-width: -webkit-fit-content;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+}
+
+.body__layout {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.page__width-limiter {
+  display: flex;
+  margin: 0 auto;
+  max-width: 992px;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+@media (min-width: 768px) {
+  .page__width-limiter {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+@media (min-width: 1400px) {
+  .page__width-limiter {
+    max-width: 1400px;
+  }
+  .page__width-limiter .content-container {
+    gap: 10rem;
+    justify-content: center;
+  }
+  .page__width-limiter .title {
+    padding-left: 17.5rem;
+  }
+}
+
+/* =============================================================== */
+/* Header                                                          */
+/* =============================================================== */
+.header {
+  flex-grow: 0;
+  flex-shrink: 0;
+  height: 6.1rem;
+}
+.header > .page__width-limiter {
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: 100%;
+}
+
+/* =============================================================== */
+/* Main                                                            */
+/* =============================================================== */
+.main {
+  background-color: hsl(0deg, 0%, 98%);
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-start;
+}
+.main > .page__width-limiter {
+  width: 100%;
+  flex-direction: column;
+}
+
+.title {
+  padding-top: 3.2rem;
+  padding-bottom: 4vw;
+  font-size: 6vw;
+}
+@media (min-width: 992px) {
+  .title {
+    padding-top: 3.2rem;
+    padding-bottom: 3rem;
+    font-size: 3.6rem;
+  }
+}
+
+.content-container {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 992px) {
+  .content-container {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+}
+
+.cart-information {
+  background-color: #F2F2F2;
+  border-radius: 1.2rem;
+  padding: 0 7vw;
+  padding-top: 1vw;
+}
+@media (min-width: 992px) {
+  .cart-information {
+    padding: 0 3rem;
+    padding-top: 0.2rem;
+    width: 38.5rem;
+    max-height: 54rem;
+  }
+}
+
+.cart-information-product {
+  display: flex;
+  gap: 6vw;
+  padding-top: 7.2vw;
+}
+@media (min-width: 992px) {
+  .cart-information-product {
+    padding-top: 3.1rem;
+    gap: 2.2rem;
+  }
+}
+
+.cart-information-product-image {
+  border-radius: 1.5rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  width: 33vw;
+  height: 33vw;
+}
+@media (min-width: 992px) {
+  .cart-information-product-image {
+    width: 136px;
+    height: 136px;
+  }
+}
+
+.cart-information-product-information {
+  display: flex;
+  flex-direction: column;
+}
+
+.cart-information-product-title {
+  font-size: 3.2vw;
+}
+@media (min-width: 992px) {
+  .cart-information-product-title {
+    font-size: 1.6rem;
+  }
+}
+
+.cart-information-product-price {
+  display: flex;
+  align-items: center;
+  gap: 3.3vw;
+  padding-top: 3vw;
+}
+@media (min-width: 992px) {
+  .cart-information-product-price {
+    gap: 1.4rem;
+    padding-top: 1rem;
+  }
+}
+
+.cart-information-product-price-discount {
+  color: #F2994A;
+  font-size: 3.7vw;
+}
+@media (min-width: 992px) {
+  .cart-information-product-price-discount {
+    font-size: 1.6rem;
+  }
+}
+
+.cart-information-product-price-full {
+  -webkit-text-decoration-line: line-through;
+          text-decoration-line: line-through;
+  font-size: 2.6vw;
+}
+@media (min-width: 992px) {
+  .cart-information-product-price-full {
+    font-size: 1.2rem;
+  }
+}
+
+.cart-information-product-empty-space {
+  flex-grow: 1;
+}
+
+.cart-information-product-qt {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #828282;
+  border-radius: 1.2rem;
+  padding: 3.2vw;
+  width: 30vw;
+}
+@media (min-width: 992px) {
+  .cart-information-product-qt {
+    padding: 1.5rem;
+    width: 14rem;
+  }
+}
+
+.cart-information-product-qt > span {
+  color: #333333;
+  font-size: 4vw;
+}
+@media (min-width: 992px) {
+  .cart-information-product-qt > span {
+    font-size: 1.6rem;
+  }
+}
+
+.cart-information-product-qt > button {
+  font-family: "Poppins", sans-serif;
+  background-color: #E0E0E0;
+  border: 0;
+  border-radius: 0.4rem;
+  font-weight: 400;
+  line-height: 0;
+  color: #828282;
+  width: 5.5vw;
+  height: 5.5vw;
+  font-size: 5.5vw;
+}
+@media (min-width: 992px) {
+  .cart-information-product-qt > button {
+    width: 2.2rem;
+    height: 2.2rem;
+    font-size: 2.2rem;
+  }
+}
+
+.cart-information-money {
+  padding-top: 22vw;
+  padding-bottom: 6vw;
+}
+@media (min-width: 992px) {
+  .cart-information-money {
+    padding-top: 10rem;
+    padding-bottom: 2rem;
+  }
+}
+
+.cart-information-money-part {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #BDBDBD;
+}
+
+.cart-information-money-part-name {
+  color: #333333;
+  font-size: 3.8vw;
+  line-height: 10vw;
+}
+@media (min-width: 992px) {
+  .cart-information-money-part-name {
+    font-size: 1.8rem;
+    line-height: 4rem;
+  }
+}
+
+.cart-information-money-part-price {
+  color: #333333;
+  font-size: 3.2vw;
+  line-height: 10vw;
+}
+@media (min-width: 992px) {
+  .cart-information-money-part-price {
+    font-size: 1.4rem;
+    line-height: 4rem;
+  }
+}
+
+.user-information {
+  padding-top: 10vw;
+}
+@media (min-width: 992px) {
+  .user-information {
+    width: 50rem;
+    padding-top: 0;
+  }
+}
+
+.user-information-title {
+  color: #333333;
+  font-size: 3.8vw;
+  padding-bottom: 3vw;
+}
+@media (min-width: 992px) {
+  .user-information-title {
+    font-size: 1.8rem;
+    padding-bottom: 1.5rem;
+  }
+}
+
+.input-wrapper {
+  position: relative;
+}
+
+.placeholder-image {
+  display: block;
+  position: absolute;
+  font-family: "Material Symbols Rounded";
+  font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 48;
+  font-weight: 700;
+  line-height: 1;
+  font-style: normal;
+  color: #828282;
+  order: 100;
+  left: 2.2vw;
+  top: 7.1vw;
+  font-size: 4.5vw;
+}
+@media (min-width: 992px) {
+  .placeholder-image {
+    left: 1.6rem;
+    top: 3.6rem;
+    font-size: 2.6rem;
+  }
+}
+
+label {
+  display: block;
+  color: #4F4F4F;
+  font-size: 2.7vw;
+  padding-bottom: 1.2vw;
+}
+@media (min-width: 992px) {
+  label {
+    font-size: 1.2rem;
+    padding-bottom: 0.7rem;
+  }
+}
+
+input[type=text] {
+  background-color: transparent;
+  border: 1px solid #828282;
+  border-radius: 1.2rem;
+  width: 100%;
+  color: #333333;
+  height: 10vw;
+  margin-bottom: 4vw;
+  font-size: 3.4vw;
+  padding-left: 8vw;
+}
+@media (min-width: 992px) {
+  input[type=text] {
+    height: 5.6rem;
+    margin-bottom: 2rem;
+    font-size: 1.6rem;
+    padding-left: 5rem;
+  }
+}
+
+select {
+  border: 1px solid #828282;
+  border-radius: 1.2rem;
+  width: 100%;
+  color: #828282;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background: url("./img/down-chevron.png") 96%/10% no-repeat;
+  height: 10vw;
+  margin-bottom: 4vw;
+  font-size: 3.4vw;
+  padding-left: 8vw;
+}
+@media (min-width: 992px) {
+  select {
+    height: 5.6rem;
+    margin-bottom: 2rem;
+    font-size: 1.6rem;
+    padding-left: 5rem;
+  }
+}
+
+.option-enabled {
+  color: #333333;
+}
+
+.option-disabled {
+  color: #828282;
+}
+
+.user-information-empty-space {
+  height: 5vw;
+}
+@media (min-width: 992px) {
+  .user-information-empty-space {
+    height: 3rem;
+  }
+}
+
+.country-and-postal-code-group {
+  display: flex;
+  gap: 5vw;
+}
+@media (min-width: 992px) {
+  .country-and-postal-code-group {
+    gap: 3rem;
+  }
+}
+
+.country-and-postal-code-group > .input-wrapper {
+  width: 100%;
+}
+
+.checkbox-group {
+  align-items: flex-start;
+  display: flex;
+  padding-top: 0.8vw;
+}
+@media (min-width: 992px) {
+  .checkbox-group {
+    padding-top: 0.2rem;
+  }
+}
+
+input[type=checkbox] {
+  height: 5vw;
+  width: 5vw;
+  margin-right: 2vw;
+}
+@media (min-width: 992px) {
+  input[type=checkbox] {
+    height: 2.4rem;
+    width: 2.4rem;
+    margin-right: 1rem;
+  }
+}
+
+input[type=checkbox]::after {
+  height: 3vw;
+  width: 1.8vw;
+}
+@media (min-width: 992px) {
+  input[type=checkbox]::after {
+    height: 1.5rem;
+    width: 0.9rem;
+  }
+}
+
+.checkbox-span {
+  font-size: 2.7vw;
+}
+@media (min-width: 992px) {
+  .checkbox-span {
+    font-size: 1.2rem;
+  }
+}
+
+.btn-continue-container {
+  display: flex;
+  justify-content: end;
+  padding-top: 5vw;
+}
+@media (min-width: 992px) {
+  .btn-continue-container {
+    padding-top: 2rem;
+  }
+}
+
+.btn-continue {
+  background: #F2994A;
+  border-radius: 12px;
+  border: 0;
+  color: white;
+  font-size: 4vw;
+  padding: 4vw 15vw;
+}
+@media (min-width: 992px) {
+  .btn-continue {
+    font-size: 1.6rem;
+    padding: 1.7rem 4.5rem;
+  }
+}
+
+.validation-results {
+  display: none;
+  padding-top: 2vw;
+  font-size: 2.7vw;
+}
+@media (min-width: 992px) {
+  .validation-results {
+    padding-top: 1rem;
+    font-size: 1.2rem;
+  }
+}
+
+.validation-results--bad {
+  display: flex;
+  color: red;
+}
+
+.validation-results--good {
+  display: flex;
+  color: green;
+}
+
+/* =============================================================== */
+/* Footer                                                          */
+/* =============================================================== */
+.footer {
+  margin-top: 8vw;
+  flex-grow: 0;
+  flex-shrink: 0;
+  height: 6.1rem;
+}
+.footer > .page__width-limiter {
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.footer__text {
+  font-family: "Montserrat";
+  font-weight: 500;
+  font-size: 1.2rem;
+  color: hsl(0deg, 0%, 66%);
+}
+.footer__link {
+  font-family: inherit;
+  color: inherit;
+}
+.footer__link:hover {
+  text-decoration: underline;
+}

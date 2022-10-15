@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="./img/devchallenges.png" type="image/x-icon" />
+  <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,700,0,0" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" /> -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet" href="styles.css">
+  <title>devChallenges.io - My Gallery</title>
+</head>
+
+<body class="body__layout">
+  <main class="main">
+    <div class="page__width-limiter">
+
+      <h1 class="title">Checkout</h1>
+
+      <div class="content-container">
+
+        <section class="cart-information">
+
+          <div class="cart-information-product" id="cart-product-1">
+            <img src="./img/photo1.png" alt="" class="cart-information-product-image">
+            <div class="cart-information-product-information">
+              <h2 class="cart-information-product-title">Vintage Backbag</h2>
+              <div class="cart-information-product-price">
+                <p class="cart-information-product-price-discount">$54.99</p>
+                <p class="cart-information-product-price-full">$94.99</p>
+              </div>
+              <div class="cart-information-product-empty-space"></div>
+              <div class="cart-information-product-qt">
+                <button id="minus">-</button>
+                <span id="qt">1</span>
+                <button id="plus">+</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="cart-information-product" id="cart-product-2">
+            <img src="./img/photo2.png" alt="" class="cart-information-product-image">
+            <div class="cart-information-product-information">
+              <h2 class="cart-information-product-title">Levi Shoes</h2>
+              <div class="cart-information-product-price">
+                <p class="cart-information-product-price-discount">$74.99</p>
+                <p class="cart-information-product-price-full">$124.99</p>
+              </div>
+              <div class="cart-information-product-empty-space"></div>
+              <div class="cart-information-product-qt">
+                <button id="minus">-</button>
+                <span id="qt">1</span>
+                <button id="plus">+</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="cart-information-money">
+            <div class="cart-information-money-part">
+              <span class="cart-information-money-part-name">Shipping</span>
+              <span class="cart-information-money-part-price">$19</span>
+            </div>
+            <div class="cart-information-money-part">
+              <span class="cart-information-money-part-name">Total</span>
+              <span class="cart-information-money-part-price">$148.98</span>
+            </div>
+          </div>
+
+        </section>
+
+        <section class="user-information">
+          <h2 class="user-information-title">Contact information</h2>
+
+          <div class="input-wrapper">
+            <label for="email">E-mail</label>
+            <input class="input-email" placeholder="Enter your email..." id="email" type="text">
+            <span class="placeholder-image">mail</span>
+          </div>
+
+          <div class="input-wrapper">
+            <label for="phone">Phone</label>
+            <input class="input-phone" placeholder="Enter your phone..." id="phone" type="text">
+            <span class="placeholder-image">call</span>
+          </div>
+
+          <div class="user-information-empty-space"></div>
+          <h2 class="user-information-title">Shipping address</h2>
+          
+          <div class="input-wrapper">
+            <label for="name">Full name</label>
+            <input class="input-name" placeholder="Your full name..." id="name" type="text">
+            <span class="placeholder-image">person</span>
+          </div>
+
+          <div class="input-wrapper">
+            <label for="address">Address</label>
+            <input class="input-address" placeholder="Your address..." id="address" type="text">
+            <span class="placeholder-image">home</span>
+          </div>
+
+          <div class="input-wrapper">
+            <label for="city">City</label>
+            <input class="input-city" placeholder="Your city..." id="city" type="text">
+            <span class="placeholder-image">location_city</span>
+          </div>
+
+          <div class="country-and-postal-code-group">
+            <div class="input-wrapper">
+              <label for="country">Country</label>
+              <select class="input-country option-disabled" id="country">
+                <option class="option-disabled" value="" disabled selected hidden>Your country...</option>
+                <option class="option-enabled" value="US">United States</option>
+                <option class="option-enabled" value="Canada">Canada</option>
+                <option class="option-enabled" value="Mexico">Mexico</option>                
+              </select>
+              <span class="placeholder-image">public</span>
+            </div>
+
+            <div class="input-wrapper">
+              <label for="code">Postal code</label>
+              <input class="input-code" placeholder="Your code..." id="code" type="text">
+              <span class="placeholder-image">markunread_mailbox</span>
+            </div>
+          </div>
+
+          <div class="checkbox-group">
+            <label class="checkbox-label">
+              <input type="checkbox" checked="">
+              <span class="checkbox-span">Save this information for next time</span>
+            </label>
+          </div>
+
+          <span class="validation-results"></span>
+
+          <div class="btn-continue-container">
+            <button class="btn-continue" type="submit">Continue</button>
+          </div>
+        
+        </section>
+      </div>
+
+  
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="page__width-limiter">
+      <p class="footer__text">
+        Created by <a class="footer__link" href="https://github.com/ViRT1ST">ViRT1ST</a> @ devChallenges.io
+      </p>
+    </div>
+  </footer>
+    
+  <script>
+    const productsInCart = document.querySelectorAll('.cart-information-product');
+
+    productsInCart.forEach((v) => {
+      const minusButton = v.querySelector('.cart-information-product-qt > #minus')
+      const plusButton = v.querySelector('.cart-information-product-qt > #plus')
+      const qtSpan = v.querySelector('.cart-information-product-qt > #qt')
+
+      minusButton.addEventListener('click', event => {
+        event.preventDefault();
+        const currentValue = Number(qtSpan.textContent) || 0;
+        const newValue = currentValue - 1;
+        if (currentValue > 1) {
+          qtSpan.textContent = newValue;
+        }
+      });
+
+      plusButton.addEventListener('click', event => {
+        event.preventDefault();
+        const currentValue = Number(qtSpan.textContent) || 0;
+        const newValue = currentValue + 1;
+        if (currentValue >= 0) {
+          qtSpan.textContent = newValue;
+        }
+      });
+    });
+
+    const countryField = document.getElementById('country');
+    countryField.addEventListener('change', event =>  {
+      countryField.classList.remove("option-disabled");
+      countryField.classList.add("option-enabled");
+    });
+
+    const continueButton = document.querySelector('.btn-continue');
+    continueButton.addEventListener('click', event =>  {
+      event.preventDefault();
+
+      const userEmail = document.querySelector('.input-email').value;
+      const userPhone = document.querySelector('.input-phone').value;
+      const userName = document.querySelector('.input-name').value;
+      const userAddress = document.querySelector('.input-address').value;
+      const userCity = document.querySelector('.input-city').value;
+      const userCountry = document.querySelector('.input-country').value;
+      const userCode = document.querySelector('.input-code').value;
+
+      const productQuantities = [];
+      document.querySelectorAll('#qt').forEach((v) => {
+        productQuantities.push(v.textContent);
+      })
+
+      const validationResults = [];
+      if (userEmail.length < 1 ) validationResults.push("Email");
+      if (userPhone.length < 1 ) validationResults.push("Phone");
+      if (userName.length < 1 ) validationResults.push("Full name");
+      if (userAddress.length < 1 ) validationResults.push("Address");
+      if (userCity.length < 1 ) validationResults.push("City");
+      if (userCountry.length < 1 ) validationResults.push("Country");
+      if (userCode.length < 1 ) validationResults.push("Postal code");
+      if (productQuantities.includes("0")) validationResults.push("Quantity in cart");
+      
+      const resultsSpan = document.querySelector('.validation-results');
+      if (validationResults.length === 0) {
+        resultsSpan.textContent = "All validations passed succesfully.";
+        resultsSpan.classList.remove("validation-results--bad");
+        resultsSpan.classList.add("validation-results--good");
+      } else {
+        resultsSpan.innerHTML = `Errors in these fields: <br> - ${validationResults.join('<br> - ')}`;
+        resultsSpan.classList.remove("validation-results--good");
+        resultsSpan.classList.add("validation-results--bad");
+      }
+
+    });
+  </script>
+  
+</body>
+</html>
